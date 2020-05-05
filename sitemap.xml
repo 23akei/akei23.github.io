@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://akei23.github.io/about/</loc>
+    <lastmod>2020-05-05T22:45:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akei23.github.io/</loc>
+    <lastmod>2020-05-05T22:45:03+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://akei23.github.io/categories/</loc>
     <lastmod>2020-05-05T22:16:47+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://akei23.github.io/posts/</loc>
-    <lastmod>2020-05-05T22:16:47+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://akei23.github.io/</loc>
     <lastmod>2020-05-05T22:16:47+09:00</lastmod>
   </url>
   
