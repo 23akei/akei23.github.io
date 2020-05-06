@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>Kanzaki Akei       2020</copyright>
-    <lastBuildDate>Wed, 06 May 2020 00:34:14 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 13:01:29 +0900</lastBuildDate>
     
 	<atom:link href="https://akei23.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>備忘録</title>
+      <link>https://akei23.github.io/categories/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
+      <pubDate>Wed, 06 May 2020 13:01:29 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/categories/%E5%82%99%E5%BF%98%E9%8C%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>技術</title>
       <link>https://akei23.github.io/categories/%E6%8A%80%E8%A1%93/</link>
-      <pubDate>Wed, 06 May 2020 00:34:14 +0900</pubDate>
+      <pubDate>Wed, 06 May 2020 13:01:29 +0900</pubDate>
       
       <guid>https://akei23.github.io/categories/%E6%8A%80%E8%A1%93/</guid>
       <description></description>
