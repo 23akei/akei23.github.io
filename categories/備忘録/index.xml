@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>備忘録 on あけいログ</title>
+    <link>https://akei23.github.io/categories/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
+    <description>Recent content in 備忘録 on あけいログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>Kanzaki Akei       2020</copyright>
+    <lastBuildDate>Wed, 06 May 2020 13:01:29 +0900</lastBuildDate>
+    
+	<atom:link href="https://akei23.github.io/categories/%E5%82%99%E5%BF%98%E9%8C%B2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sshの設定で(個人的に)よく詰まるとこ</title>
+      <link>https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/</link>
+      <pubDate>Wed, 06 May 2020 13:01:29 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/</guid>
+      <description>最近なにかとssh接続を使う機会が多く、２日連続で同じミスをやらかしたのでちゃんとまとめておく。 まと</description>
+    </item>
+    
+  </channel>
+</rss>

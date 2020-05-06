@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="sshの設定で(個人的に)よく詰まるとこ" />
+<meta property="og:description" content="最近なにかとssh接続を使う機会が多く、２日連続で同じミスをやらかしたのでちゃんとまとめておく。 まと" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/" />
+<meta property="article:published_time" content="2020-05-06T13:01:29+09:00" />
+<meta property="article:modified_time" content="2020-05-06T13:01:29+09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="sshの設定で(個人的に)よく詰まるとこ"/>
+<meta name="twitter:description" content="最近なにかとssh接続を使う機会が多く、２日連続で同じミスをやらかしたのでちゃんとまとめておく。 まと"/>
+<meta name="generator" content="Hugo 0.69.2" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "sshの設定で(個人的に)よく詰まるとこ",
+  "url": "https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/",
+  "wordCount": "426",
+  "datePublished": "2020-05-06T13:01:29+09:00",
+  "dateModified": "2020-05-06T13:01:29+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "神崎あけい"
+  },
+  "keywords": "技術, 備忘録, ssh, github"
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/">
+
+    <title>sshの設定で(個人的に)よく詰まるとこ | あけいログ</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="https://akei23.github.io/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="https://akei23.github.io/js/fontawesome.min.f3d2a1f5980bab30ddd0d8cadbd496475309fc48e2b1d052c5c09e6facffcb0f.js" integrity="sha256-89Kh9ZgLqzDd0NjK29SWR1MJ/EjisdBSxcCeb6z/yw8=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    <meta name="google-site-verification" content="UAXOK4FBI06Hox2qtJH1uSEaa_ggEnhPoiVV20T14AQ" />
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://akei23.github.io/">Home</a>
+          
+          <a class="nav-link" href="/about" title="">About</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="https://akei23.github.io/" rel="home">あけいログ</a></h1>
+        <p class="lead blog-description" dir="auto">あけいの備忘録/雑記帳</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/">sshの設定で(個人的に)よく詰まるとこ</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-06T13:01:29+09:00">Wed May 06, 2020</time> by 神崎あけい in 
+<span class="fas fa-folder" aria-hidden="true"></span>&nbsp;<a href="/categories/%E6%8A%80%E8%A1%93/" rel="category tag">技術</a>, <a href="/categories/%E5%82%99%E5%BF%98%E9%8C%B2/" rel="category tag">備忘録</a>
+
+
+<span class="fas fa-tag" aria-hidden="true"></span>&nbsp;<a href="/tags/ssh/" rel="tag">ssh</a>, <a href="/tags/github/" rel="tag">github</a>
+
+</p>
+  </header>
+  <p>　最近なにかとssh接続を使う機会が多く、２日連続で同じミスをやらかしたのでちゃんとまとめておく。<br>
+　まとめるけど詳細は書かないのでこれを取っ掛かりにしてググって。これはそういう記事。<br>
+<br>
+<br>
+<br></p>
+<h4 id="接続について">接続について</h4>
+<p>　sshそのものや、やり方についてはqiitaとかにいっぱい記事があるのでそちらを参照あれ。<br>
+<br>
+<br>
+<br></p>
+<h4 id="sshでエラー出たら">sshでエラー出たら</h4>
+<p>　とりあえずsshのデバッグコマンド（オプション <code>-vT</code> ）を実行する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
+</code></pre></div><p>　（例としてgithubを接続先にしてある。）<br>
+　オプションの <code>v</code> を省略して <code>-T</code> とすると単純にテスト接続ができる。
+<br>
+<br>
+<br></p>
+<h4 id="config">config</h4>
+<p>　<code>/home/.ssh/config</code> で秘密鍵の設定したかどうか。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Host github <span style="color:#75715e"># 接続名</span>
+  User git <span style="color:#75715e"># 接続ユーザー。githubの場合はgit</span>
+  HostName github.com
+  IdentityFile ~/.ssh/<span style="color:#f92672">(</span>秘密鍵のファイル<span style="color:#f92672">)</span>
+</code></pre></div><br>
+<br>
+<br>
+<h4 id="permisson">permisson</h4>
+<p>　秘密鍵ファイルの権限。強すぎても弱すぎてもだめ。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod <span style="color:#ae81ff">600</span> <span style="color:#f92672">(</span>秘密鍵ファイル<span style="color:#f92672">)</span>
+</code></pre></div><br>
+<br>
+<br>
+<h4 id="ssh-add">ssh-add</h4>
+<p>　秘密鍵の追加。コンソールごとに必要なので毎回自動で実行するようにするといい。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">eval <span style="color:#e6db74">`</span>ssh-agent<span style="color:#e6db74">`</span> &gt; /dev/null
+ssh-add ~/.ssh/<span style="color:#f92672">(</span>秘密鍵ファイル<span style="color:#f92672">)</span> &gt;&amp; /dev/null
+</code></pre></div><br>
+<br>
+<br>
+<p>だいぶ適当なので後日加筆訂正するかも。</p>
+<hr>
+<h6 id="主な参考">主な参考</h6>
+<p><a href="https://qiita.com/nyanchu/items/32d65c4c36315b876d38">https://qiita.com/nyanchu/items/32d65c4c36315b876d38</a><br>
+<a href="https://qastack.jp/superuser/325662/how-to-make-ssh-agent-automatically-add-the-key-on-demand">https://qastack.jp/superuser/325662/how-to-make-ssh-agent-automatically-add-the-key-on-demand</a></p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fakei23.github.io%2f2020%2f05%2fssh%25E3%2581%25AE%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25A7%25E5%2580%258B%25E4%25BA%25BA%25E7%259A%2584%25E3%2581%25AB%25E3%2582%2588%25E3%2581%258F%25E8%25A9%25B0%25E3%2581%25BE%25E3%2582%258B%25E3%2581%25A8%25E3%2581%2593%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fakei23.github.io%2f2020%2f05%2fssh%25E3%2581%25AE%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25A7%25E5%2580%258B%25E4%25BA%25BA%25E7%259A%2584%25E3%2581%25AB%25E3%2582%2588%25E3%2581%258F%25E8%25A9%25B0%25E3%2581%25BE%25E3%2582%258B%25E3%2581%25A8%25E3%2581%2593%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fakei23.github.io%2f2020%2f05%2fssh%25E3%2581%25AE%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25A7%25E5%2580%258B%25E4%25BA%25BA%25E7%259A%2584%25E3%2581%25AB%25E3%2582%2588%25E3%2581%258F%25E8%25A9%25B0%25E3%2581%25BE%25E3%2582%258B%25E3%2581%25A8%25E3%2581%2593%2f&amp;text=ssh%e3%81%ae%e8%a8%ad%e5%ae%9a%e3%81%a7%28%e5%80%8b%e4%ba%ba%e7%9a%84%e3%81%ab%29%e3%82%88%e3%81%8f%e8%a9%b0%e3%81%be%e3%82%8b%e3%81%a8%e3%81%93" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p dir="auto">神崎の技術系備忘録と雑記です。<a href="/about">more →</a></p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/">sshの設定で(個人的に)よく詰まるとこ</a></li>
+
+<li><a href="/2020/05/%E3%81%99%E3%81%A7%E3%81%AB%E6%96%87%E7%AB%A0%E6%9B%B8%E3%81%8F%E3%81%AE%E3%83%80%E3%83%AB%E3%81%84/">すでに文章書くのダルい</a></li>
+
+<li><a href="/2020/05/%E6%9C%80%E5%88%9D%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8/">最初のページ</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>Links</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://twitter.com/kanzaki_klis/">Twitter</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      Kanzaki Akei       2020
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
