@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>Kanzaki Akei       2020</copyright>
-    <lastBuildDate>Wed, 06 May 2020 13:01:29 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 00:56:53 +0900</lastBuildDate>
     
 	<atom:link href="https://akei23.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OpenCV</title>
+      <link>https://akei23.github.io/tags/opencv/</link>
+      <pubDate>Mon, 11 May 2020 00:56:53 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/tags/opencv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://akei23.github.io/tags/ubuntu/</link>
+      <pubDate>Mon, 11 May 2020 00:56:53 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>環境構築</title>
+      <link>https://akei23.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
+      <pubDate>Mon, 11 May 2020 00:56:53 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>github</title>

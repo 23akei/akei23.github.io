@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>Kanzaki Akei       2020</copyright>
-    <lastBuildDate>Wed, 06 May 2020 13:01:29 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 00:56:53 +0900</lastBuildDate>
     
 	<atom:link href="https://akei23.github.io/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ubuntu上でOpenCV開発環境を構築</title>
+      <link>https://akei23.github.io/2020/05/ubuntu%E4%B8%8A%E3%81%A7opencv%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89/</link>
+      <pubDate>Mon, 11 May 2020 00:56:53 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/2020/05/ubuntu%E4%B8%8A%E3%81%A7opencv%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89/</guid>
+      <description>Ubuntu上でOpenCVの環境構築をする際に結構手間がかかったのでその手順をまとめます。いままで</description>
+    </item>
     
     <item>
       <title>sshの設定で(個人的に)よく詰まるとこ</title>
