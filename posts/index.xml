@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>Kanzaki Akei       2020</copyright>
-    <lastBuildDate>Mon, 11 May 2020 00:56:53 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 13:19:50 +0900</lastBuildDate>
     
 	<atom:link href="https://akei23.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>冷汁</title>
+      <link>https://akei23.github.io/2020/06/%E5%86%B7%E6%B1%81/</link>
+      <pubDate>Wed, 17 Jun 2020 13:19:50 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/2020/06/%E5%86%B7%E6%B1%81/</guid>
+      <description>夏が近づいて暑くなってくるとともに食欲が失せがち。食欲があまりない時でも結構食べられる冷汁。たまに作</description>
+    </item>
     
     <item>
       <title>Ubuntu上でOpenCV開発環境を構築</title>

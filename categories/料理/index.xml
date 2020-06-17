@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>料理 on あけいログ</title>
+    <link>https://akei23.github.io/categories/%E6%96%99%E7%90%86/</link>
+    <description>Recent content in 料理 on あけいログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>Kanzaki Akei       2020</copyright>
+    <lastBuildDate>Wed, 17 Jun 2020 13:19:50 +0900</lastBuildDate>
+    
+	<atom:link href="https://akei23.github.io/categories/%E6%96%99%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>冷汁</title>
+      <link>https://akei23.github.io/2020/06/%E5%86%B7%E6%B1%81/</link>
+      <pubDate>Wed, 17 Jun 2020 13:19:50 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/2020/06/%E5%86%B7%E6%B1%81/</guid>
+      <description>夏が近づいて暑くなってくるとともに食欲が失せがち。食欲があまりない時でも結構食べられる冷汁。たまに作</description>
+    </item>
+    
+  </channel>
+</rss>

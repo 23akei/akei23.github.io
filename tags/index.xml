@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>Kanzaki Akei       2020</copyright>
-    <lastBuildDate>Mon, 11 May 2020 00:56:53 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 13:19:50 +0900</lastBuildDate>
     
 	<atom:link href="https://akei23.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>レシピ</title>
+      <link>https://akei23.github.io/tags/%E3%83%AC%E3%82%B7%E3%83%94/</link>
+      <pubDate>Wed, 17 Jun 2020 13:19:50 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/tags/%E3%83%AC%E3%82%B7%E3%83%94/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>OpenCV</title>
