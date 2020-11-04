@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>Kanzaki Akei       2020</copyright>
-    <lastBuildDate>Wed, 17 Jun 2020 14:35:54 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2020 23:19:59 +0900</lastBuildDate>
     
 	<atom:link href="https://akei23.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>自転車盗まれた話</title>
+      <link>https://akei23.github.io/2020/11/%E8%87%AA%E8%BB%A2%E8%BB%8A%E7%9B%97%E3%81%BE%E3%82%8C%E3%81%9F%E8%A9%B1/</link>
+      <pubDate>Wed, 04 Nov 2020 23:19:59 +0900</pubDate>
+      
+      <guid>https://akei23.github.io/2020/11/%E8%87%AA%E8%BB%A2%E8%BB%8A%E7%9B%97%E3%81%BE%E3%82%8C%E3%81%9F%E8%A9%B1/</guid>
+      <description>みなさん気をつけましょう シャンプーの話 いきなり話が横道にそれますが、皆さんはどんなシャンプーを使って</description>
+    </item>
     
     <item>
       <title>Hugo と GitHub Pages</title>
@@ -18,7 +27,7 @@
       <pubDate>Wed, 17 Jun 2020 14:35:54 +0900</pubDate>
       
       <guid>https://akei23.github.io/2020/06/hugo-%E3%81%A8-github-pages/</guid>
-      <description>このページは静的サイト生成ツールのHugoとHitHubの機能の一つのGitHub Pagesによって</description>
+      <description>このページは静的サイト生成ツールのHugoとGitHubの機能の一つのGitHub Pagesによって</description>
     </item>
     
     <item>
@@ -46,15 +55,6 @@
       
       <guid>https://akei23.github.io/2020/05/ssh%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A7%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E3%82%88%E3%81%8F%E8%A9%B0%E3%81%BE%E3%82%8B%E3%81%A8%E3%81%93/</guid>
       <description>最近なにかとssh接続を使う機会が多く、２日連続で同じミスをやらかしたのでちゃんとまとめておく。 まと</description>
-    </item>
-    
-    <item>
-      <title>すでに文章書くのダルい</title>
-      <link>https://akei23.github.io/2020/05/%E3%81%99%E3%81%A7%E3%81%AB%E6%96%87%E7%AB%A0%E6%9B%B8%E3%81%8F%E3%81%AE%E3%83%80%E3%83%AB%E3%81%84/</link>
-      <pubDate>Wed, 06 May 2020 00:34:14 +0900</pubDate>
-      
-      <guid>https://akei23.github.io/2020/05/%E3%81%99%E3%81%A7%E3%81%AB%E6%96%87%E7%AB%A0%E6%9B%B8%E3%81%8F%E3%81%AE%E3%83%80%E3%83%AB%E3%81%84/</guid>
-      <description>２つ目の投稿にしてすでにタイトルのような有様である。このブログの先が思いやられる。 ここに見出しが入り</description>
     </item>
     
     <item>
